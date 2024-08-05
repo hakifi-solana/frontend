@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Basic */
+  body::-webkit-scrollbar {
+    @apply hidden;
+  }
+  /* Track */
+  body::-webkit-scrollbar-track {
+  }
+
+  /* Handle */
+  body::-webkit-scrollbar-thumb {
+  }
+}
+
+@layer components {
+  /*
+    Typography
+  */
+
+  /* Heading */
+  .text-heading-1 {
+    @apply text-[88px] font-normal leading-[88px] tracking-[5.28px] font-determination;
+  }
+  .text-heading-2 {
+    @apply text-[48px] font-normal leading-[48px] tracking-[2.88px] font-determination;
+  }
+  .text-heading-3 {
+    @apply text-[28px] font-normal leading-[28px] tracking-[1.68px] font-determination;
+  }
+  .text-heading-4 {
+    @apply text-[20px] font-normal leading-[20px] tracking-[1.2px] font-determination;
+  }
+
+  /* Tab */
+  .text-tab-16 {
+    @apply text-[16px] font-normal leading-[24px] tracking-[0.96px] font-determination;
+  }
+  .text-tab-14 {
+    @apply text-[14px] font-normal leading-[22px] tracking-[0.84px] font-determination;
+  }
+
+  /* Title */
+  .text-title-40 {
+    @apply text-[40px] font-semibold leading-[40px] font-saira;
+  }
+  .text-title-24 {
+    @apply text-[24px] font-semibold leading-[36px] font-saira;
+  }
+  .text-title-20 {
+    @apply text-[20px] font-semibold leading-[24px] font-saira;
+  }
+
+  /* Body */
+  .text-body-16 {
+    @apply text-base font-medium leading-[24px] font-saira;
+  }
+  .text-body-14 {
+    @apply text-[14px] font-medium leading-[22px] font-saira;
+  }
+  .text-body-12 {
+    @apply text-[12px] font-medium leading-[14.4px] font-saira;
+  }
+
+  /* Custom scrollbar style */
+  .custom-scroll::-webkit-scrollbar {
+    @apply rounded-lg w-0.5;
+  }
+
+  .custom-scroll::-webkit-scrollbar-track {
+    @apply rounded-full bg-transparent my-2 mx-0;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-background-scrim;
+  }
+
+  .desktop-screen {
+    @apply mx-auto max-w-[1240px];
+  }
+
+  /* Custom scroll for table */
+  .scroll-table::-webkit-scrollbar {
+    @apply !rounded-lg h-0.5 w-3;
+  }
+
+  /* Track */
+  .scroll-table::-webkit-scrollbar-track {
+    @apply rounded bg-background-quaternary;
+  }
+
+  /* Handle */
+  .scroll-table::-webkit-scrollbar-thumb {
+    @apply rounded h-2 bg-support-scroll;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    @apply hidden;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .guideline rect:not(.reactour__mask--disable-interaction) {
+    @apply fill-background-scrim opacity-60;
+  }
+
+  .guideline .reactour__mask--disable-interaction {
+    @apply p-2;
+  }
+
+  .reactour_hakifi {
+    @apply bg-background-scrim border-none !p-0;
+  }
+
+  .reactour_hakifi::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    border: 6px solid transparent;
+  }
+
+  .reactour_hakifi.bottom {
+    margin: 16px 0;
+  }
+
+  .reactour_hakifi.bottom::before {
+    /* @apply left-[20px] top-0 border-t-0 border-b-[10px] border-typo-tertiary trans */
+    left: 20px;
+    top: 0;
+    border-top: 0;
+    border-bottom: 10px solid #111314;
+    transform: translate(-50%, -100%);
+  }
+  .reactour_hakifi.left {
+    left: -16px;
+  }
+  .reactour_hakifi.left::before {
+    top: 112px;
+    right: 0;
+    border-right: 0;
+    border-left: 10px solid #111314;
+    transform: translate(100%);
+  }
+  .reactour_hakifi.right {
+    margin-left: 16px;
+  }
+  .reactour_hakifi.right::before {
+    top: 24px;
+    left: 0;
+    border-left: 0;
+    border-right: 10px solid #111314;
+    transform: translate(-100%);
+  }
+  .reactour_hakifi.top {
+    top: -16px;
+  }
+  .reactour_hakifi.top::before {
+    bottom: 0;
+    border-bottom: 0;
+    border-top: 10px solid #111314;
+    transform: translate(0, 100%);
+  }
+}
+
+.p-claim-slider .rc-slider-mark {
+  top: -25px;
+}
